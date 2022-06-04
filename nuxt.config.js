@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'maukerja',
+    title: 'Maukerja',
     htmlAttrs: {
       lang: 'en'
     },
@@ -54,14 +54,15 @@ export default {
     // FIXME: proxy work when false, when set to true, it'll give unexpected behaviour
     // unexpected behaviour : API call inside async data not executed properly when executed on client,
     // usually triggered by nuxt-link
-    proxy: true
+    proxy: true,
+    credentials: false
   },
 
   proxy: {
     '/jobs': {
-      target: 'hhttp://feapi.ajt.my/',
+      target: 'http://feapi.ajt.my/',
       changeOrigin: true,
-      pathRewrite: { '^/jobs': '/' },
+      // pathRewrite: { '^/jobs': '/' },
     },
   },
 

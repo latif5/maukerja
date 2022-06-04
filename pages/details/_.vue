@@ -7,10 +7,11 @@
 
 <script>
 import Jobdetails from '../../components/Jobdetails.vue';
-  const asyncData = async function({ $auth, app, route }) {
+
+const asyncData = async function({ $auth, app, route }) {
   const path = route.path.substring().split('/')
   // const pathLocation = path[2] || path[0]
-  const idLab = path[3]
+  const idLab = path[2]
   const params = {
     "filter[id]": idLab,
   }

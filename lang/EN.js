@@ -9,5 +9,9 @@ export default {
     jobstitle : "Jobs Title Company",
     location : "Location",
     minsalary : "Min Salary (MYR)"
+  },
+  jobdetails : {
+    reponsibilities: "Reponsibilities",
+    requirements: "Requirements"
   }
 }

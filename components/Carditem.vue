@@ -16,7 +16,6 @@
                 <b-card-title>{{ job.title }}</b-card-title>
                 <b-card-sub-title class="mb-2">{{ job.company.name }}</b-card-sub-title>
               </NuxtLink>
-              
             </div>
           </div>
           <b-row class="facility__key">
@@ -81,6 +80,7 @@
       name: ''
     }
   }
+  
   export default {
     props,
     data,

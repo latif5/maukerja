@@ -57,6 +57,34 @@
               </b-row>
             </b-card-footer>
           </b-card>
+
+          <b-card
+            no-body
+            class="card__spacing"
+          >
+            <template #header>
+              <h4 class="mb-0">{{$t('jobdetails.requirements')}}</h4>
+            </template>
+            <b-card-body>
+              <b-card-text>
+                {{ job.descriptions.requirements }}
+              </b-card-text>
+            </b-card-body>
+          </b-card>
+
+          <b-card
+            no-body
+            class="card__spacing"
+          >
+            <template #header>
+              <h4 class="mb-0">{{$t('jobdetails.reponsibilities')}}</h4>
+            </template>
+            <b-card-body>
+              <b-card-text>
+                {{ job.descriptions.reponsibilities }}
+              </b-card-text>
+            </b-card-body>
+          </b-card>
         </b-card-group>
       </div>
     </div>
