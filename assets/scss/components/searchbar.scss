@@ -1,0 +1,18 @@
+.search__nav {
+  margin: 20px 0px;
+}
+
+.search__button {
+  width: inherit;
+  background-color: theme('colors.primary');
+  border-color: theme('colors.primary');
+}
+
+.search__input {
+  border-radius: 50rem;
+}
+
+.search__icon {
+  height: 16px;
+  margin-right: 5px;
+}

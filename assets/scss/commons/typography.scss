@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: theme('fonts.families.opensans'), sans-serif;
+    // color: theme('colors.grey');
+    background-color: theme('colors.grey');
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: theme('fonts.families.opensans'), sans-serif;
+}
+
+h1 {
+  font-size: theme('fonts.sizes.16');
+}
+
+h2 {
+    font-size: theme('fonts.sizes.12');
+}
+h3 {
+    font-size: theme('fonts.sizes.11');
+}
+
+
+a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: theme('colors.primary')
+    }
+}
+
+p {
+    line-height: 1.5;
+}

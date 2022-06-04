@@ -1,0 +1,21 @@
+// theme function copied & derivative from https://stackoverflow.com/a/42295154/531853
+@function theme($string) {
+  $value: $--theme;
+  $separator: '.';
+
+  // first index of separator in string
+  $index : str-index($string, $separator);
+  @while $index != null {
+      // get value from key
+      $key: str-slice($string, 1, $index - 1);
+      $value: map-get($value, $key);
+
+      // remove item and separator from string
+      $string: str-slice($string, $index + str-length($separator));
+      // find new index of separator
+      $index : str-index($string, $separator);
+  }
+
+  // return value from last key (remaining string)
+  @return map-get($value, $string);
+}
