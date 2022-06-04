@@ -1,15 +1,22 @@
 <template>
   <div class="page">
     <div class="container">
-      <Carditem />
+      <Carditem :jobs="jobs"/>
     </div>
   </div>
   
 </template>
 
 <script>
+  const props = {
+    jobs: {
+      type: Array,
+      required: true
+    }
+  }
+
   export default {
-    
+    props
   }
 </script>
 

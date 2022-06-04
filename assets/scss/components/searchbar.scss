@@ -16,3 +16,9 @@
   height: 16px;
   margin-right: 5px;
 }
+
+@media (max-width: 991px) {
+  .search__nav {
+    margin: 20px 0px 10px 0px;
+  }
+}

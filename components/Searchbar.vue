@@ -2,9 +2,9 @@
   <div>
     <div class="container">
       <b-nav class="search__nav">
-        <b-col lg="3" class="pb-2"><b-form-input v-model="text" class="search__input" placeholder="Jobs Title Company"></b-form-input></b-col>
-        <b-col lg="3" class="pb-2"><b-form-input v-model="text" class="search__input" placeholder="Jobs Title Company"></b-form-input></b-col>
-        <b-col lg="3" class="pb-2"><b-form-input v-model="text" class="search__input" placeholder="Jobs Title Company"></b-form-input></b-col>
+        <b-col lg="3" class="pb-2"><b-form-input v-model="text" class="search__input" :placeholder="$t('searchbar.jobstitle')"></b-form-input></b-col>
+        <b-col lg="3" class="pb-2"><b-form-input v-model="text" class="search__input" :placeholder="$t('searchbar.location')"></b-form-input></b-col>
+        <b-col lg="3" class="pb-2"><b-form-input v-model="text" class="search__input" :placeholder="$t('searchbar.minsalary')"></b-form-input></b-col>
         <b-col lg="3" class="pb-2"><b-button pill variant="primary" class="search__button"><b-icon icon="search" class="search__icon"></b-icon>Find Jobs</b-button></b-col>
       </b-nav>
     </div>

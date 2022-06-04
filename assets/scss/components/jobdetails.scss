@@ -1,0 +1,25 @@
+.card__banner {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0rem 0rem; 
+}
+
+.facility__details {
+  margin: 20px 100px 0px;
+  .col-6 {
+    display: flex;
+    margin-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    .facility__icon {
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .facility__details {
+    margin: 20px 0px 0px;
+  }
+}

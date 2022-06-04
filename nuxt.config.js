@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/services',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,7 +36,34 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/i18n',
+    '@nuxtjs/axios',
   ],
+
+  // localization
+  i18n: {
+    locales: [{ code: 'en', iso: 'id-EN', file: 'EN.js', dir: 'ltr' }],
+    defaultLocale: 'en',
+    langDir: 'lang/'
+  },
+
+   // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    baseURL: 'http://feapi.ajt.my/',
+    https: false,
+    // FIXME: proxy work when false, when set to true, it'll give unexpected behaviour
+    // unexpected behaviour : API call inside async data not executed properly when executed on client,
+    // usually triggered by nuxt-link
+    proxy: true
+  },
+
+  proxy: {
+    '/jobs': {
+      target: 'hhttp://feapi.ajt.my/',
+      changeOrigin: true,
+      pathRewrite: { '^/jobs': '/' },
+    },
+  },
 
   bootstrapVue: {
     icons: true
