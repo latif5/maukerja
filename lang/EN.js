@@ -13,5 +13,9 @@ export default {
   jobdetails : {
     reponsibilities: "Reponsibilities",
     requirements: "Requirements"
+  },
+  commons : {
+    recordnotfound: "Sorry data is not available.",
+    recordtitle: "Not found",
   }
 }

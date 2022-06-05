@@ -18,10 +18,7 @@ const asyncData = async function({ app, store }) {
   .catch(function(error) {
     console.log(error)
   })
-  store.commit('jobs/add', response.data.data) 
-  // return {
-  //   jobs: response.data.data
-  // }
+  store.commit('jobs/add', response.data.data)
 }
 
 const data = function() {

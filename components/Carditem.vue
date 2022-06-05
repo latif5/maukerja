@@ -1,13 +1,17 @@
 <template>
   <div>
     <b-card-group deck>
+      <b-card v-if="jobs.toString() == [].toString()" :header="$t('commons.recordtitle')" class="text-center card__spacing">
+        <b-card-text>{{$t('commons.recordnotfound')}} </b-card-text>
+      </b-card>
+
       <b-card
         no-body
         class="card__spacing"
         v-for="job in jobs"
         :key="job.id"
       >
-
+      
         <b-card-body>
           <div class="card__group">
             <b-img :src="job.company.logo" class="card__logo" alt="Image" bottom></b-img>

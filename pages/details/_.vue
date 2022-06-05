@@ -10,7 +10,6 @@ import Jobdetails from '../../components/Jobdetails.vue';
 
 const asyncData = async function({ $auth, app, route }) {
   const path = route.path.substring().split('/')
-  // const pathLocation = path[2] || path[0]
   const idLab = path[2]
   const params = {
     "filter[id]": idLab,
@@ -29,6 +28,7 @@ const asyncData = async function({ $auth, app, route }) {
 const data = function() {
   return { name: 'MauKerja' }
 }
+
 export default {
   components: { Jobdetails },
   data,

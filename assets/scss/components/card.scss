@@ -4,6 +4,9 @@
 .card-deck {
   flex-flow: column;
 }
+.card-header {
+  border-radius: 1rem 1rem 0rem 0rem;
+}
 
 .card-footer {
   border-radius: 0rem 0rem 1rem 1rem;
@@ -86,6 +89,9 @@
 @media (max-width: 991px) {
   .card__spacing {
     margin: 3rem 1rem 0rem 1rem;
+  }
+  .card:last-child {
+    margin-bottom: 0px;
   }
 }
 
