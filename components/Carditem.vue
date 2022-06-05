@@ -34,7 +34,7 @@
             <b-col cols="6">
               <b-icon icon="pin-map-fill" class="facility__icon"></b-icon>
               <b-card-text>
-                {{ job.location.country }} 
+                {{ job.location.state }} 
               </b-card-text>
             </b-col>
           </b-row>

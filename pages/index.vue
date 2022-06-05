@@ -1,27 +1,35 @@
 <template>
   <div>
-    <Navbar />
-    <Joblist :jobs="jobs"/>
+    <Navbar @jobsFiltered="updateJobList($event)"/>
+    <Joblist :jobs="listJobs"/>
   </div>
 </template>
 
 <script>
-const asyncData = async function({ $auth, app, route }) {
+const computed = {
+  listJobs: function() {
+    return this.$store.state.jobs.listJobs
+  }
+}
+
+const asyncData = async function({ app, store }) {
   let response;
   response = await app.$jobs.get()
   .catch(function(error) {
     console.log(error)
   })
-
-  return {
-    jobs: response.data.data
-  }
+  store.commit('jobs/add', response.data.data) 
+  // return {
+  //   jobs: response.data.data
+  // }
 }
 
 const data = function() {
   return { name: 'MauKerja' }
 }
+
 export default {
+  computed,
   data,
   asyncData
 }
